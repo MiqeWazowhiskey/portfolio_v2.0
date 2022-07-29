@@ -1,0 +1,33 @@
+a{
+    position: relative;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    letter-spacing: 0.5px;
+    display: flex;
+    margin-right: 64px;
+
+}
+
+a:after{
+    content : "";
+    position: absolute;
+    background-color: coral;
+    height: 3px;
+    width: 0;
+    left: 0;
+    margin-top: 24px;
+}
+a:hover:after{
+    transition: all;
+    transition-duration: 0.5s;
+    width: 100%;
+}
+nav {
+    height: 64px;
+    width: 100%;
+    min-width: 600px;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
