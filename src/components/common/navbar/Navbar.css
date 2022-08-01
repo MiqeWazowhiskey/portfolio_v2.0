@@ -6,7 +6,7 @@ a{
     letter-spacing: 0.5px;
     display: flex;
     margin-right: 64px;
-
+    padding-left: 32px;
 }
 
 a:after{
