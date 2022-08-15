@@ -3,7 +3,8 @@ import { NavLink} from 'react-router-dom'
 import "./Navbar.css"
 function Navbar() {
   return (
-    <nav>    
+    <nav>
+   
         <NavLink to="/">
          <a>Anasayfa</a>
         </NavLink>
@@ -16,6 +17,7 @@ function Navbar() {
         <NavLink to="/Contact">
          <a>Contact</a>
         </NavLink>
+   
     </nav>
   )
 }

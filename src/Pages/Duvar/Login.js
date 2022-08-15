@@ -4,8 +4,6 @@ import { auth, provider } from '../../firebase'
 function Login() {
   const login = () => {
     signInWithPopup(auth,provider).catch(console.error())
-
-    
   }
   return (
     <div className='flex justify-center mt-12'>

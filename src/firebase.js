@@ -1,7 +1,6 @@
 import {initializeApp} from 'firebase/app'
 import { getAuth, GoogleAuthProvider  } from "firebase/auth";
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite'
-
+import { getFirestore } from 'firebase/firestore/lite'
 const firebaseConfig = {
     apiKey: "AIzaSyCdWh7HhDhSb4z58O1mh2wURiGf9qmjl4w",
     authDomain: "board-842ea.firebaseapp.com",

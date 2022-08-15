@@ -5,8 +5,6 @@ a{
     font-size: medium;
     letter-spacing: 0.5px;
     display: flex;
-    margin-right: 64px;
-    padding-left: 32px;
 }
 
 a:after{
@@ -28,6 +26,6 @@ nav {
     width: 100%;
     min-width: 600px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 16px;
 }

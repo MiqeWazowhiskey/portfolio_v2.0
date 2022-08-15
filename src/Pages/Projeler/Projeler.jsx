@@ -2,7 +2,9 @@ import React from 'react'
 
 function Projeler() {
   return (
-    <div>Projeler</div>
+    <div className='flex flex-col justify-center items-center'>
+      proje
+    </div>
   )
 }
 
