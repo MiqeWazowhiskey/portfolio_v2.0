@@ -30,31 +30,17 @@ function Home() {
           ></img>
         </a>
       </div>
-      <div className='flex absolute bottom-20 gap-x-5' >
-        <motion.a href='https://www.instagram.com/kaanyble.2/'
-                  target={"_blank"} rel="noopenner noreferrer"
-                  whileHover={{scale:1.3}}>
-         <SiInstagram/>
-        </motion.a>
-        <motion.a href='https://github.com/MiqeWazowhiskey'
-                  target={"_blank"} rel="noopenner noreferrer"
-                  whileHover={{scale:1.3}}>
-          <SiGithub />
-        </motion.a>
-        <motion.a href='https://www.linkedin.com/in/ali-kagan-yilmaz/'
-                  target={"_blank"} rel="noopenner noreferrer"
-                  whileHover={{scale: 1.3}}>
-          <SiLinkedin />
-        </motion.a>
-      </div>
-      <div className='flex absolute bottom-10'>
+       
+      <div className='flex justify-center absolute bottom-10'>
+        
+        
         <p className='px-3'>Bu web sitesinin kaynak kodlarına</p>
          <motion.a href="https://github.com/MiqeWazowhiskey/portfolio_v2.0"
                    target={"_blank"}
                    rel="noopenner norefferer"
                    whileHover={{scale: 1.3}}>
             Github
-         </motion.a>
+         </motion.a> 
          
          <p className='px-3'> üzerinden ulaşabilirsiniz.</p>
 
