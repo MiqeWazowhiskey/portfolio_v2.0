@@ -21,6 +21,15 @@ function Home() {
           />
         </div>
       </div>
+      <div className='absolute bottom-32'>
+        <a href='https://www.buymeacoffee.com/alikagany?new=1'>
+          <img style={{height: "50px"}}
+          alt="Bana Destek Ol"
+          src='/orange-button.png'
+          className='my-5'
+          ></img>
+        </a>
+      </div>
       <div className='flex absolute bottom-20 gap-x-5' >
         <motion.a href='https://www.instagram.com/kaanyble.2/'
                   target={"_blank"} rel="noopenner noreferrer"
