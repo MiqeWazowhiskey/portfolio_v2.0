@@ -7,7 +7,7 @@ function Wall({user}) {
     const [script, setScript] = useState("")
     
     return (
-    <div className='flex flex-col  justify-center items-center gap-y-8'>
+    <div className='flex flex-col  justify-center items-center gap-y-8 md:justify-center md:items-center md:gap-y-4'>
         <div className='flex flex-col items-center'>
             <h4 className='font-bold'>Hoşgeldiniz... </h4>
             {user.displayName}

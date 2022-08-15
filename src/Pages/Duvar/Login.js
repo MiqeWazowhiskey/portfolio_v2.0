@@ -6,7 +6,7 @@ function Login() {
     signInWithPopup(auth,provider).catch(console.error())
   }
   return (
-    <div className='flex justify-center mt-12'>
+    <div className='flex justify-center mt-12 md:justify-center md:mt-8 '>
         <button className= 'flex border border-orange-600 px-2 py-2 rounded-lg justify-center text-orange-600 hover:bg-red-100' onClick={login}> 
             Google Giriş
         </button>

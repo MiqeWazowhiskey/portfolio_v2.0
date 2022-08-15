@@ -5,8 +5,8 @@ import { GiClick } from "react-icons/gi";
   
 function Contact() {
   return (
-    <div className='justify-center flex flex-col gap-y-20'>
-      <div className='flex flex-col items-center gap-y-10'>
+    <div className='justify-center flex flex-col gap-y-20 md:justify-center '>
+      <div className='flex flex-col items-center gap-y-10 md:items-center'>
       <h3 className='font-bold text-4xl'>Contact Me</h3>
       <p className='text-gray-400'>Get in touch with me ...</p>
       </div>

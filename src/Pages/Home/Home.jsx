@@ -2,11 +2,11 @@ import React from 'react'
 import Typical from 'react-typical'
 import "./Home.css"
 import { motion } from 'framer-motion'
-import { SiGithub,SiLinkedin,SiInstagram } from "react-icons/si";
+
 
 function Home() {
   return (
-    <div className='flex flex-col items-center flex-wrap'>
+    <div className='flex flex-col items-center flex-wrap md:items-center'>
       <div className='flex flex-col items-center gap-y-2'>
         <h1 className='font-bold text-5xl'>Ali Kağan Yılmaz</h1>       
         <h3 className='text-3xl'>Akdeniz Universitesi</h3>
@@ -40,8 +40,7 @@ function Home() {
                    rel="noopenner norefferer"
                    whileHover={{scale: 1.3}}>
             Github
-         </motion.a> 
-         
+         </motion.a>
          <p className='px-3'> üzerinden ulaşabilirsiniz.</p>
 
         </div>
