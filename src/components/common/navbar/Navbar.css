@@ -24,7 +24,7 @@ a:hover:after{
 nav {
     height: 64px;
     width: 100%;
-    min-width: 600px;
+    min-width: fit-content;
     display: flex;
     justify-content: space-between;
     margin-top: 16px;
