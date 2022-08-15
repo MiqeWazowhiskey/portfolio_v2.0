@@ -6,7 +6,7 @@ import { SiGithub,SiLinkedin,SiInstagram } from "react-icons/si";
 
 function Home() {
   return (
-    <div className='flex flex-col items-center'>
+    <div className='flex flex-col items-center flex-wrap'>
       <div className='flex flex-col items-center gap-y-2'>
         <h1 className='font-bold text-5xl'>Ali Kağan Yılmaz</h1>       
         <h3 className='text-3xl'>Akdeniz Universitesi</h3>
@@ -49,7 +49,7 @@ function Home() {
       </div>
       <div className='flex absolute bottom-10'>
         <p className='px-3'>Bu web sitesinin kaynak kodlarına</p>
-         <motion.a href="https://github.com/MiqeWazowhiskey"
+         <motion.a href="https://github.com/MiqeWazowhiskey/portfolio_v2.0"
                    target={"_blank"}
                    rel="noopenner norefferer"
                    whileHover={{scale: 1.3}}>
