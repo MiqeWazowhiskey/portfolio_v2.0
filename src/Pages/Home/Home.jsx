@@ -34,7 +34,7 @@ function Home() {
       <div className='flex justify-center absolute bottom-10'>
         
         
-        <p className='px-3'>Bu web sitesinin kaynak kodlarına</p>
+        <p className='px-3'>Bu web sitesinin kodlarına</p>
          <motion.a href="https://github.com/MiqeWazowhiskey/portfolio_v2.0"
                    target={"_blank"}
                    rel="noopenner norefferer"
