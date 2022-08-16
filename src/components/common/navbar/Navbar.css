@@ -33,7 +33,7 @@ nav {
     nav {
         height: 64px;
         width:50%;
-        min-width: 300px;
+        min-width: 400px;
         display: flex;
         justify-content: space-around;
         margin-top: 16px;

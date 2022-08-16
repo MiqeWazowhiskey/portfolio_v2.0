@@ -1,10 +1,10 @@
-import { signInWithPopup } from 'firebase/auth'
+import { signInWithCredential, signInWithPopup, signInWithRedirect } from 'firebase/auth'
 import React from 'react'
 import { auth, provider } from '../../firebase'
 import {FcGoogle} from 'react-icons/fc'
 function Login() {
   const login = () => {
-    signInWithPopup(auth,provider).catch(console.error())
+    signInWithRedirect(auth,provider).catch(console.error())
   }
   return (
     <div className='flex flex-col justify-center items-center  md:justify-center gap-y-3 '>

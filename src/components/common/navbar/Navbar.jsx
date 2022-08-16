@@ -4,7 +4,6 @@ import "./Navbar.css"
 function Navbar() {
   return (
     <nav>
-   
         <NavLink to="/">
          <a>Anasayfa</a>
         </NavLink>

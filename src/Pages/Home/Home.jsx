@@ -8,8 +8,8 @@ function Home() {
   return (
     <div className='flex flex-col items-center flex-wrap md:items-center'>
       <div className='flex flex-col items-center gap-y-2'>
-        <h1 className='font-bold text-5xl'>Ali Kağan Yılmaz</h1>       
-        <h3 className='text-3xl'>Akdeniz Universitesi</h3>
+        <h1 className='font-bold text-3xl lg:text-5xl'>Ali Kağan Yılmaz</h1>       
+        <h3 className='text-xl lg:text-3xl'>Akdeniz Universitesi</h3>
         <div>
           <Typical 
             steps = {['React Enthusiast',2500,
