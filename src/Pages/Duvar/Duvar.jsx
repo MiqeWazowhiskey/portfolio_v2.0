@@ -10,9 +10,7 @@ function Duvar() {
   const [user,setUser] = useState(null)
   const [values, setValues] = useState([]);
 
-  const del = async(id) => {
-    await deleteDoc(doc(db,'scripts',id))
-  }
+  
 
   useEffect(() => {
       auth.onAuthStateChanged((authUser) => {
@@ -52,7 +50,7 @@ function Duvar() {
               
                 <div className='flex flex-row items-center gap-x-5 text-2xl'> <BsFillArrowRightCircleFill/>{value.message}</div>
                 <div className='text-gray-400 text-xs flex gap-x-5 justify-end'>{value.name}</div>
-                <button className='flex justify-end' onClick={del(value.id)}><TiDeleteOutline size={15}/></button>
+                <button className='flex justify-end' onClick={async()=>await deleteDoc(doc(db,'scripts',value.id))}><TiDeleteOutline size={15}/></button>
                  
 
                 
