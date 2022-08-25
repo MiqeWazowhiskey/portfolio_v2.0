@@ -35,7 +35,7 @@ function Wall({ user }) {
       <div className="flex justify-center h-16 border p-2 gap-x-2">
         <input
           placeholder="Buraya bir not bırak..."
-          size={40}
+          size={28}
           className="underline"
           value={script}
           onChange={(e) => setScript(e.target.value)}
