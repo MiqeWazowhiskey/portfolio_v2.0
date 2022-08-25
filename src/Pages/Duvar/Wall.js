@@ -1,23 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import db, { auth } from '../../firebase';
-import {
-  collection,
-  doc,
-  QuerySnapshot,
-  setDoc
-} from 'firebase/firestore/lite';
-import { motion } from 'framer-motion';
+import { collection , doc  , getDoc, getDocs, onSnapshot, query, setDoc } from 'firebase/firestore';
 import { v4 as uuidv4 } from 'uuid';
 function Wall({ user }) {
   const [script, setScript] = useState('');
-  const [values, setValues] = useState([]);
+ 
   const res = async (script) => {
-    await setDoc(doc(db, '/scripts', uuidv4()), {
-      kullanıcı: script
+    const id = uuidv4()
+    await setDoc(doc(db, '/scripts',id), {
+      id:id,
+      message: script,
+      name : user.displayName
     }).then(() => {
       setScript('');
     });
   };
+  
+  
+  
   return (
     <div className="flex flex-col  justify-center items-center gap-y-8 md:justify-center md:items-center md:gap-y-4">
       <div className="flex flex-col items-center">
@@ -49,7 +49,7 @@ function Wall({ user }) {
           Submit
         </button>
       </div>
-      <div className="flex"></div>
+      
     </div>
   );
 }

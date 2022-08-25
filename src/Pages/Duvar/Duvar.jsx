@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from 'react'
-import { auth } from '../../firebase'
+import db,{ auth } from '../../firebase'
 import Login from './Login'
 import Wall from './Wall'
-
-
+import { collection ,  deleteDoc,  onSnapshot, query,doc  } from 'firebase/firestore';
+import {BsFillArrowRightCircleFill} from 'react-icons/bs'
+import {TiDeleteOutline} from 'react-icons/ti'
 function Duvar() {
 
   const [user,setUser] = useState(null)
+  const [values, setValues] = useState([]);
+
+  const del = async(id) => {
+    await deleteDoc(doc(db,'scripts',id))
+  }
 
   useEffect(() => {
       auth.onAuthStateChanged((authUser) => {
@@ -19,10 +25,43 @@ function Duvar() {
         console.log(authUser)
       })
   }, [])
-  return (
-    <div >
+  useEffect(()=>{
+    const q = query(collection(db,'scripts'))
+    const unsub = onSnapshot(q,(snapshot)=>{
+      let temp =[]
+      snapshot.forEach(doc=>{
+        temp.push({...doc.data(), id:doc.id })
+        
+      })
+      setValues(temp)
       
-      {user ? <Wall user={user} /> : <Login />}
+    })
+    return ()=> unsub() 
+    
+  },[])
+  
+  
+  return (
+    <div className='flex flex-col items-center' >
+      <div>{user ? <Wall user={user} /> : <Login />}</div>
+      
+      <div className=' flex flex-col gap-y-10 mt-10 items-start w-96 lg:w-fit '>
+        {values.map((value)=>{
+            return (
+              <div key={value.id} className="flex flex-col px-4 py-1 w-96 lg:w-fit" >
+              
+                <div className='flex flex-row items-center gap-x-5 text-2xl'> <BsFillArrowRightCircleFill/>{value.message}</div>
+                <div className='text-gray-400 text-xs flex gap-x-5 justify-end'>{value.name}</div>
+                <button className='flex justify-end' onClick={del(value.id)}><TiDeleteOutline size={15}/></button>
+                 
+
+                
+              </div>
+              
+            )
+          })}
+        
+      </div>
     
     </div>
 

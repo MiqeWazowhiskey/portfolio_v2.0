@@ -1,4 +1,4 @@
-import { signInWithCredential, signInWithPopup, signInWithRedirect } from 'firebase/auth'
+import {  signInWithRedirect } from 'firebase/auth'
 import React from 'react'
 import { auth, provider } from '../../firebase'
 import {FcGoogle} from 'react-icons/fc'
