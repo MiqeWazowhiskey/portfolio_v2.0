@@ -10,7 +10,8 @@ function Wall({ user }) {
     await setDoc(doc(db, '/scripts',id), {
       id:id,
       message: script,
-      name : user.displayName
+      name : user.displayName,
+      mail : user.email
     }).then(() => {
       setScript('');
     });
