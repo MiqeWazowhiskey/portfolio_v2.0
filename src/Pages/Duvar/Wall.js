@@ -13,7 +13,7 @@ function Wall({ user }) {
       name : user.displayName,
       mail : user.email,
       like : 0,
-      likedUser: []
+      likedUser: ["example@gmail.com"]
     }).then(() => {
       setScript('');
     });
