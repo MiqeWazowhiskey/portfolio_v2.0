@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import db,{ auth } from '../../firebase'
 import Login from './Login'
 import Wall from './Wall'
-import { collection ,  deleteDoc,  onSnapshot, query,doc, getDoc, updateDoc,increment, setDoc  } from 'firebase/firestore';
+import { collection ,  deleteDoc,  onSnapshot, query,doc, getDoc, updateDoc,increment, arrayUnion, arrayRemove  } from 'firebase/firestore';
 import {BsFillArrowRightCircleFill} from 'react-icons/bs'
 import {TiDeleteOutline} from 'react-icons/ti'
 import {FcLike} from 'react-icons/fc'
@@ -54,18 +54,32 @@ function Duvar() {
                 </div>
                 <div className='text-gray-400 text-xs flex flex-col items-end gap-x-5 justify-end'>
                   {value.name}
-                  <button className='flex w-fit text-black' onClick={async()=>{
+                  <button className=' w-fit text-black' onClick={async()=>{
                   
-                  const q = (await getDoc(doc(db,'scripts',value.id))).data() 
-                  if(q.mail===user.email)
-                  await deleteDoc(doc(db,'scripts',value.id))
-                  
-              }}><TiDeleteOutline size={15}/></button>
+                    const q = (await getDoc(doc(db,'scripts',value.id))).data() 
+                    if(q.mail===user.email)
+                    await deleteDoc(doc(db,'scripts',value.id))
+                    }
+                  }><TiDeleteOutline size={15}/>
+                </button>
                 </div>
-                <button className='w-fit' onClick={async()=>
-                await updateDoc(doc(db,'scripts',value.id),{
-                  like : increment(1)
-                })  }><FcLike/>{value.like}</button>
+                <button className='flex flex-col items-center w-fit ' onClick={async()=>{
+                    const get = (await getDoc(doc(db,'scripts',value.id))).data()
+                    if(!get.likedUser.includes(user.email)){
+                    await updateDoc(doc(db,'scripts',value.id),{
+                      like : increment(1),
+                      likedUser: arrayUnion(user.email)
+                    }) }
+                    else if (get.likedUser.includes(user.email)) 
+                    {  await updateDoc(doc(db,'scripts',value.id),{
+                        like : increment(-1),
+                        likedUser: arrayRemove(user.email)
+                      })}
+                    
+                    }}><FcLike/>{value.like}
+                   
+                </button>
+                
                 
                 
 
