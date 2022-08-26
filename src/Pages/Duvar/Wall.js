@@ -11,7 +11,8 @@ function Wall({ user }) {
       id:id,
       message: script,
       name : user.displayName,
-      mail : user.email
+      mail : user.email,
+      like : 0
     }).then(() => {
       setScript('');
     });
