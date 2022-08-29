@@ -2,7 +2,7 @@ import React from 'react'
 import Typical from 'react-typical'
 import "./Home.css"
 import { motion } from 'framer-motion'
-
+import {AiOutlineArrowRight} from 'react-icons/ai'
 
 function Home() {
   return (
@@ -31,17 +31,21 @@ function Home() {
         </a>
       </div>
        
-      <div className='flex justify-center absolute bottom-10'>
+      <div className='flex justify-center absolute bottom-10 whitespace-nowrap'>
         
         
-        <p className='px-3'>Bu web sitesinin kodlarına</p>
-         <motion.a href="https://github.com/MiqeWazowhiskey/portfolio_v2.0"
+        <p className='px-3'>Bu web sitesinin kodları için</p>
+        <div className='flex flex-row font-bold gap-x-5 items-center'>
+        <AiOutlineArrowRight/>
+        <motion.a href="https://github.com/MiqeWazowhiskey/portfolio_v2.0"
                    target={"_blank"}
                    rel="noopenner norefferer"
                    whileHover={{scale: 1.3}}>
             Github
          </motion.a>
-         <p className='px-3'> üzerinden ulaşabilirsiniz.</p>
+        </div>
+         
+      
 
         </div>
     </div>
