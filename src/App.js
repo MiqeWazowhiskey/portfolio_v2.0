@@ -2,6 +2,7 @@ import Header from './components/common/header';
 import {Routes, Route} from "react-router-dom"
 import { Home ,Duvar, Contact, Projeler } from './Pages';
 import './App.css';
+import { Analytics } from '@vercel/analytics/react';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path='/Contact' element={<Contact/>}></Route>
         <Route path='/Projeler' element={<Projeler/>}></Route>
       </Routes>
+      <Analytics/>
     </div>
     
  
