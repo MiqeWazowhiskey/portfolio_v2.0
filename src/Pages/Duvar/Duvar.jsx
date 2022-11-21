@@ -6,6 +6,7 @@ import { collection ,  deleteDoc,  onSnapshot, query,doc, getDoc, updateDoc,incr
 import {BsFillArrowRightCircleFill} from 'react-icons/bs'
 import {TiDeleteOutline} from 'react-icons/ti'
 import {FcLike} from 'react-icons/fc'
+import { Layout } from '../../components/common';
 function Duvar() {
 
   const [user,setUser] = useState(null)
@@ -40,6 +41,7 @@ function Duvar() {
   
    
   return (
+    <Layout>
     <div className='flex flex-col items-center' >
       <div>{user ? <Wall user={user} /> : <Login />}</div>
        
@@ -92,7 +94,7 @@ function Duvar() {
       </div>
     
     </div>
-
+    </Layout>
   )
 }
 

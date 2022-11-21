@@ -1,8 +1,8 @@
-import Header from "./header";
 import Navbar from "./navbar";
 import { Button } from "./button";
+import Layout from './layout'
 export{
-    Header,
     Navbar,
-    Button
+    Button,
+    Layout
 }

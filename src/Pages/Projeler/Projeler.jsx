@@ -1,6 +1,7 @@
 import React, { useEffect,useState } from 'react'
 import {motion} from 'framer-motion'
 import {RiGitRepositoryLine} from 'react-icons/ri'
+import { Layout } from '../../components/common';
 function Projeler() {
   const[repos,setRepos]=useState([]);
   useEffect(()=>{
@@ -11,6 +12,7 @@ function Projeler() {
   },[])
   console.log(repos)
   return (
+    <Layout>
     <div className='flex flex-col justify-center gap-x-20 gap-y-10 items-center'>
       {repos.map(repo=> {
         return (
@@ -35,6 +37,7 @@ function Projeler() {
       })}
       <h3 className='items-center'> And billions are on the way, Stay Tuned !  </h3>
     </div>
+    </Layout>
   )
 }
 

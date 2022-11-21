@@ -2,9 +2,10 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { SiGithub,SiLinkedin,SiInstagram} from "react-icons/si";
 import { GiClick } from "react-icons/gi";
-  
+import { Layout } from '../../components/common';  
 function Contact() {
   return (
+    <Layout>
     <div className='justify-center flex flex-col gap-y-20 '>
       <div className='flex flex-col items-center gap-y-10 '>
       <h3 className='font-bold text-4xl'>Contact Me</h3>
@@ -46,7 +47,7 @@ function Contact() {
             </div>
       </div>
     </div>  
-          
+    </Layout>   
       
   
   )

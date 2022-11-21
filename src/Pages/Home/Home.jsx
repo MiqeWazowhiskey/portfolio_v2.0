@@ -1,11 +1,13 @@
 import React from 'react'
 import Typical from 'react-typical'
 import "./Home.css"
+import { Layout } from '../../components/common'
 import { motion } from 'framer-motion'
 import {AiOutlineArrowRight} from 'react-icons/ai'
-
+import {FaArrowCircleDown as Arrow} from 'react-icons/fa'
 function Home() {
   return (
+    <Layout>
     <div className='flex flex-col items-center flex-wrap md:items-center'>
       <div className='flex flex-col items-center gap-y-2'>
         <h1 className='font-bold text-3xl lg:text-5xl'>Ali Kağan Yılmaz</h1>       
@@ -21,15 +23,7 @@ function Home() {
           />
         </div>
       </div>
-      <div className='absolute bottom-32'>
-        <a href='https://www.buymeacoffee.com/alikagany?new=1'>
-          <img style={{height: "50px"}}
-          alt="Bana Destek Ol"
-          src='/orange-button.png'
-          className='my-5'
-          ></img>
-        </a>
-      </div>
+      
        
       <div className='flex justify-center absolute bottom-10 whitespace-nowrap'>
         
@@ -46,10 +40,13 @@ function Home() {
         </div>
          
       
-
+        
         </div>
+        <div className='flex'>
+            About Me 
+        </div>  
     </div>
-    
+    </Layout>
 
   )
 }
