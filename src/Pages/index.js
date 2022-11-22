@@ -1,10 +1,10 @@
 import Projeler from "./Projeler";
-import Duvar from "./Duvar";
+import Wall from "./Wall";
 import Home from "./Home";
 import Contact from "./Contact"
 export {
     Projeler,
     Home,
-    Duvar,
+    Wall,
     Contact
 }

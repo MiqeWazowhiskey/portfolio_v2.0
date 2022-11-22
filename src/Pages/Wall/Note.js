@@ -2,7 +2,7 @@ import React, {  useState } from 'react';
 import db, { auth } from '../../firebase';
 import { collection , doc  , getDoc, getDocs, onSnapshot, query, setDoc } from 'firebase/firestore';
 import { v4 as uuidv4 } from 'uuid';
-function Wall({ user }) {
+function Note({ user }) {
   const [script, setScript] = useState('');
  
   const res = async (script) => {
@@ -57,4 +57,4 @@ function Wall({ user }) {
   );
 }
 
-export default Wall;
+export default Note;

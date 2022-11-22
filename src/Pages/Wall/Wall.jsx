@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import db,{ auth } from '../../firebase'
 import Login from './Login'
-import Wall from './Wall'
+import Note from './Note'
 import { collection ,  deleteDoc,  onSnapshot, query,doc, getDoc, updateDoc,increment, arrayUnion, arrayRemove  } from 'firebase/firestore';
 import {BsFillArrowRightCircleFill} from 'react-icons/bs'
 import {TiDeleteOutline} from 'react-icons/ti'
 import {FcLike} from 'react-icons/fc'
 import { Layout } from '../../components/common';
-function Duvar() {
+function Wall() {
 
   const [user,setUser] = useState(null)
   const [values, setValues] = useState([]);
@@ -43,7 +43,7 @@ function Duvar() {
   return (
     <Layout>
     <div className='flex flex-col items-center' >
-      <div>{user ? <Wall user={user} /> : <Login />}</div>
+      <div>{user ? <Note user={user} /> : <Login />}</div>
        
       <div className=' flex flex-col gap-y-10 mt-10 mb-10 items-start w-96 lg:w-1/2 '>
         {values.map((value)=>{
@@ -98,4 +98,4 @@ function Duvar() {
   )
 }
 
-export default Duvar
+export default Wall

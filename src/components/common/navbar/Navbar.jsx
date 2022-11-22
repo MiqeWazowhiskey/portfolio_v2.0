@@ -10,7 +10,7 @@ function Navbar() {
         <NavLink to="/Projeler">
          <a>Projeler</a>  
         </NavLink>    
-        <NavLink to="/Duvar">
+        <NavLink to="/Wall">
          <a>Duvar</a>
         </NavLink>
         <NavLink to="/Contact">
