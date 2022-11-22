@@ -11,10 +11,10 @@ const Layout = ({children}) => {
         <div className='fixed h-screen w-full flex justify-center rotate-12 opacity-50 lg:pt-3'>
           <span className='mb-10 mr-10 text-[#F4D35E]'><A size={800}/></span>
         </div>
-           <div className='fixed z-40 w-full  '>
+           <div className='fixed z-40 w-full'>
             <Header/> 
           </div>
-         <div className='pt-20'>
+         <div className='pt-20 z-40'>
           {children}
         </div>
     </div>
