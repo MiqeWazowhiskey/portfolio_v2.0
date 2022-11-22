@@ -13,12 +13,12 @@ function Projeler() {
   console.log(repos)
   return (
     <Layout>
-    <div className='flex flex-col justify-center gap-x-20 gap-y-10 items-center'>
+    <div className='flex flex-col h-screen gap-x-20 gap-y-10 items-center'>
       {repos.map(repo=> {
         return (
             
             <motion.a key={repo.id} href={repo.clone_url} whileHover={{scale: 1.1}}>
-              <div className='flex flex-col lg:w-96 px-3 rounded-lg w-48 border border-gray-200 bg-gray-100'>
+              <div className='flex flex-col lg:w-96 px-3 rounded-lg w-48 border border-gray-200 bg-gray-100 shadow-md shadow-black'>
                 <div>
                   <div className='flex flex-row text-gray-500 items-center justify-start'>
                     <RiGitRepositoryLine/>
@@ -35,7 +35,7 @@ function Projeler() {
         
         )
       })}
-      <h3 className='items-center'> And billions are on the way, Stay Tuned !  </h3>
+      <h3 className='items-center text-xl font-bold'> And billions are on the way, Stay Tuned !  </h3>
     </div>
     </Layout>
   )

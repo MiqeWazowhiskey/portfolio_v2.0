@@ -8,44 +8,50 @@ import {FaArrowCircleDown as Arrow} from 'react-icons/fa'
 function Home() {
   return (
     <Layout>
-    <div className='flex flex-col items-center flex-wrap md:items-center'>
-      <div className='flex flex-col items-center gap-y-2'>
-        <h1 className='font-bold text-3xl lg:text-5xl'>Ali Kağan Yılmaz</h1>       
-        <h3 className='text-xl lg:text-3xl'>Akdeniz Universitesi</h3>
-        <div>
-          <Typical 
-            steps = {['React Enthusiast',2500,
-                      'Developer',2500,
-                      'Designer',2500,
-                      'Cse Student',2500]}
-            loop={Infinity}
-            wrapper="p"
-          />
+      <div className='h-full w-full flex flex-col'>
+        
+        {/**Homepage */}
+        <div className='h-screen z-30'>
+          <div className='w-full  h-1/6 items-center flex justify-center font-extrabold text-4xl lg:text-5xl'>
+            <h1>Ali Kağan Yılmaz</h1>
+          </div>
+          <span className='w-full flex justify-center font-semibold text-[#F4D35E]'>
+            <Typical 
+                      steps = {['React Enthusiast',2500,
+                                'Developer',2500,
+                                'Designer',2500,
+                                'Cse Student',2500]}
+                      loop={Infinity}
+                      wrapper="p"
+                    />
+          </span>
+          <div className='flex flex-col h-4/6 justify-end gap-y-10'>
+            <div className='flex flex-row items-center space-x-5 justify-center'>
+              <span>Bu web sitesinin kodları için</span>
+              <AiOutlineArrowRight/>
+                    <motion.a href="https://github.com/MiqeWazowhiskey/portfolio_v2.0"
+                              target={"_blank"}
+                              rel="noopenner norefferer"
+                              whileHover={{scale: 1.3}}>
+                        Github
+                    </motion.a>
+            </div>
+            <div className='flex justify-center'>
+              <button className='flex  flex-col items-center'>
+                <span className='hover:animate-bounce text-[#F95738]'>
+                  <Arrow size={20}/>
+                </span>About Me
+              </button>
+
+            </div>
+          </div>
+        </div>
+        {/**About Me */}
+        <div className='h-screen'>
+
         </div>
       </div>
       
-       
-      <div className='flex justify-center absolute bottom-10 whitespace-nowrap'>
-        
-        
-        <p className='px-3'>Bu web sitesinin kodları için</p>
-        <div className='flex flex-row font-bold gap-x-5 items-center'>
-        <AiOutlineArrowRight/>
-        <motion.a href="https://github.com/MiqeWazowhiskey/portfolio_v2.0"
-                   target={"_blank"}
-                   rel="noopenner norefferer"
-                   whileHover={{scale: 1.3}}>
-            Github
-         </motion.a>
-        </div>
-         
-      
-        
-        </div>
-        <div className='flex'>
-            About Me 
-        </div>  
-    </div>
     </Layout>
 
   )

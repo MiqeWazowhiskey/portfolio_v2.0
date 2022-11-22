@@ -5,12 +5,15 @@ a{
     font-size: medium;
     letter-spacing: 0.5px;
     display: flex;
+    
 }
-
+a:focus{
+    outline: none;
+}
 a:after{
     content : "";
     position: absolute;
-    background-color: coral;
+    background-color: #F95738;
     height: 3px;
     width: 0;
     left: 0;

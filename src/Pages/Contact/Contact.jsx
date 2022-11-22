@@ -6,10 +6,10 @@ import { Layout } from '../../components/common';
 function Contact() {
   return (
     <Layout>
-    <div className='justify-center flex flex-col gap-y-20 '>
+    <div className=' flex flex-col gap-y-20 h-screen'>
       <div className='flex flex-col items-center gap-y-10 '>
       <h3 className='font-bold text-4xl'>Contact Me</h3>
-      <p className='text-gray-400'>Get in touch with me ...</p>
+      <p className='text-gray-600 font-bold'>Get in touch with me ...</p>
       </div>
       <div className='flex justify-center gap-x-20'>
             <div className='flex flex-col items-center'>
