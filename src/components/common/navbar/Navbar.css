@@ -30,15 +30,17 @@ nav {
     min-width: 600px;
     display: flex;
     justify-content: space-around;
-    margin-top: 16px;
-}
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    
+ }
 @media (max-width:800px) {
     nav {
         height: 64px;
-        width:50%;
+        width:100%;
         min-width: 400px;
         display: flex;
-        justify-content: space-around;
-        margin-top: 16px;
-    }
+        justify-content: center;
+        gap: 12px;
+      }
 }

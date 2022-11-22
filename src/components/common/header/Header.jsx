@@ -4,11 +4,9 @@ import './Header.css'
 function Header() {
   return (
 
-    <section className='flex justify-center'>
-      <div className='flex'>
+      <div className='flex  w-full  '> 
         <Navbar/>
       </div>
-    </section>
     
   )
 }

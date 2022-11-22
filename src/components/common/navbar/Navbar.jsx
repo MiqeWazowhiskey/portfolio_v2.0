@@ -3,7 +3,7 @@ import { NavLink} from 'react-router-dom'
 import "./Navbar.css"
 function Navbar() {
   return (
-    <nav className='font-bold'>
+    <nav className='font-bold backdrop-blur-sm'>
         <NavLink to="/">
          <a>Anasayfa</a>
         </NavLink>
