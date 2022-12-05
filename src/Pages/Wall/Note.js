@@ -37,7 +37,7 @@ function Note({ user }) {
       </div>
       <div className="flex justify-center h-16 border p-2 gap-x-2">
         <input
-          placeholder="Buraya bir not bırak..."
+          placeholder="Type Something..."
           size={28}
           className="underline"
           value={script}
