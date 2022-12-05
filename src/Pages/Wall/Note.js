@@ -44,7 +44,7 @@ function Note({ user }) {
           onChange={(e) => setScript(e.target.value)}
         />
         <button
-          className="px-5  rounded-lg border bg-gray-100"
+          className="px-5  rounded-lg border bg-gray-100 text-black"
           onClick={() => {
             res(script);
           }}
