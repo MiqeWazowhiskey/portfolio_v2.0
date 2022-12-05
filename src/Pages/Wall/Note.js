@@ -24,7 +24,7 @@ function Note({ user }) {
   return (
     <div className="flex flex-col  justify-center items-center gap-y-8 md:justify-center md:items-center md:gap-y-4">
       <div className="flex flex-col items-center">
-        <h4 className="font-bold">Hoşgeldiniz... </h4>
+        <h4 className="font-bold">Welcome... </h4>
         {user.displayName}
       </div>
       <div>
