@@ -1,7 +1,7 @@
 import {Routes, Route} from "react-router-dom"
 import './App.css';
 import { Analytics } from '@vercel/analytics/react';
-import React from 'react';
+import React, { useTransition } from 'react';
 const Home = React.lazy(()=>import("./Pages").then(module=>{
   return{default: module.Home}
 }))
@@ -17,6 +17,7 @@ const Wall = React.lazy(()=>import("./Pages").then(module=>{
 
 
 function App() {
+  const [isPending, startTransition] = useTransition();
   return (
     <div className='App'>
       <React.Suspense

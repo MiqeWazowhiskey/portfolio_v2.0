@@ -10,7 +10,6 @@ function Projeler() {
      .then(response=>setRepos(response))
      .catch(Error=>console.log(Error))
   },[])
-  console.log(repos)
   return (
     <Layout>
     <div className='flex flex-col h-screen gap-x-20 gap-y-10 items-center'>
