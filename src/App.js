@@ -1,9 +1,11 @@
-import Header from './components/common/header';
 import {Routes, Route} from "react-router-dom"
-import { Home ,Wall, Contact, Projeler } from './Pages';
 import './App.css';
 import { Analytics } from '@vercel/analytics/react';
-
+import React from 'react';
+const Home = React.lazy(()=>import("./Pages/Home"))
+const Contact = React.lazy(()=>import("./Pages/Contact"))
+const Wall = React.lazy(()=>import("./Pages/Wall"))
+const Projeler = React.lazy(()=>import("./Pages/Projeler"))
 
 function App() {
   return (
