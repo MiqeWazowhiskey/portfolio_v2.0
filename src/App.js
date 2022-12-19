@@ -2,27 +2,36 @@ import {Routes, Route} from "react-router-dom"
 import './App.css';
 import { Analytics } from '@vercel/analytics/react';
 import React from 'react';
-const Home = React.lazy(()=>import("./Pages/Home"))
-const Contact = React.lazy(()=>import("./Pages/Contact"))
-const Wall = React.lazy(()=>import("./Pages/Wall"))
-const Projeler = React.lazy(()=>import("./Pages/Projeler"))
+const Home = React.lazy(()=>import("./Pages").then(module=>{
+  return{default: module.Home}
+}))
+const Projeler = React.lazy(()=>import("./Pages").then(module=>{
+  return{default: module.Projeler}
+}))
+const Contact = React.lazy(()=>import("./Pages").then(module=>{
+  return{default: module.Contact}
+}))
+const Wall = React.lazy(()=>import("./Pages").then(module=>{
+  return{default: module.Wall}
+}))
+
 
 function App() {
   return (
     <div className='App'>
       <React.Suspense
           fallback={
-            <div className="text-black w-full justify-center items-center text-3xl font-extrabold">
+            <div className="text-black flex h-screen justify-center items-center text-3xl font-extrabold">
               Loading...
             </div>
         }>
-      <Routes>
-        <Route path='/' element={<Home/>}></Route>
-        <Route path='/Wall' element={<Wall/>}></Route>
-        <Route path='/Contact' element={<Contact/>}></Route>
-        <Route path='/Projeler' element={<Projeler/>}></Route>
-      </Routes>
-      <Analytics/>
+        <Routes>
+          <Route path='/' element={<Home/>}></Route>
+          <Route path='/Wall' element={<Wall/>}></Route>
+          <Route path='/Contact' element={<Contact/>}></Route>
+          <Route path='/Projeler' element={<Projeler/>}></Route>
+        </Routes>
+        <Analytics/>
       </React.Suspense>
     </div>
     
