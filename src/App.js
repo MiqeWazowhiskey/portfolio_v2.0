@@ -10,7 +10,12 @@ const Projeler = React.lazy(()=>import("./Pages/Projeler"))
 function App() {
   return (
     <div className='App'>
-      
+      <React.Suspense
+          fallback={
+            <div className="text-black w-full justify-center items-center text-3xl font-extrabold">
+              Loading...
+            </div>
+        }>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/Wall' element={<Wall/>}></Route>
@@ -18,6 +23,7 @@ function App() {
         <Route path='/Projeler' element={<Projeler/>}></Route>
       </Routes>
       <Analytics/>
+      </React.Suspense>
     </div>
     
  
