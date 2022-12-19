@@ -10,6 +10,7 @@ const Projeler = React.lazy(()=>import("./Pages/Projeler"))
 function App() {
   return (
     <div className='App'>
+      
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/Wall' element={<Wall/>}></Route>
