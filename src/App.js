@@ -1,6 +1,7 @@
 import {Routes, Route} from "react-router-dom"
 import './App.css';
 import { Analytics } from '@vercel/analytics/react';
+import { Navigate } from "react-router-dom";
 import React, { useTransition } from 'react';
 const Home = React.lazy(()=>import("./Pages").then(module=>{
   return{default: module.Home}
@@ -31,6 +32,7 @@ function App() {
           <Route path='/Wall' element={<Wall/>}></Route>
           <Route path='/Contact' element={<Contact/>}></Route>
           <Route path='/Projeler' element={<Projeler/>}></Route>
+          <Route path='/weather' element={<Navigate/>}></Route>
         </Routes>
         <Analytics/>
       </React.Suspense>

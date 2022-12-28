@@ -57,13 +57,12 @@ function Wall() {
                 <div className='text-gray-400 text-xs flex flex-col items-end gap-x-5 justify-end'>
                   {value.name}
                   <button className=' w-fit text-black' onClick={async()=>{
-                  
                     const q = (await getDoc(doc(db,'scripts',value.id))).data() 
                     if(q.mail===user.email)
                     await deleteDoc(doc(db,'scripts',value.id))
                     }
                   }><TiDeleteOutline size={15}/>
-                </button>
+                  </button>
                 </div>
                 <button className='flex flex-col items-center w-fit ' onClick={async()=>{
                     const get = (await getDoc(doc(db,'scripts',value.id))).data()
