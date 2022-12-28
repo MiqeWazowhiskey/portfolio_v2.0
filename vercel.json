@@ -1,5 +1,0 @@
-{
-    "rewrites": [
-      {"source": "/weather-app/", "destination": "https://weather-app-alpha-tan.vercel.app"}
-    ]
-  }

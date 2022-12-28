@@ -32,7 +32,6 @@ function App() {
           <Route path='/Wall' element={<Wall/>}></Route>
           <Route path='/Contact' element={<Contact/>}></Route>
           <Route path='/Projeler' element={<Projeler/>}></Route>
-          <Route path='/weather' element={<Navigate/>}></Route>
         </Routes>
         <Analytics/>
       </React.Suspense>

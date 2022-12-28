@@ -64,6 +64,7 @@ function Wall() {
                   }><TiDeleteOutline size={15}/>
                   </button>
                 </div>
+                
                 <button className='flex flex-col items-center w-fit ' onClick={async()=>{
                     const get = (await getDoc(doc(db,'scripts',value.id))).data()
                     if(!get.likedUser.includes(user.email)){
