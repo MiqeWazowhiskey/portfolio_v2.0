@@ -6,6 +6,13 @@ import { motion } from 'framer-motion'
 import {AiOutlineArrowRight} from 'react-icons/ai'
 import {FaArrowCircleDown as Arrow} from 'react-icons/fa'
 function Home() {
+  function handleScroll() {
+    window.scroll({
+      top: document.body.offsetHeight,
+      left: 0, 
+      behavior: 'smooth',
+    });
+  }
   return (
     <Layout>
       <div className='h-full w-full flex flex-col'>
@@ -37,7 +44,7 @@ function Home() {
                     </motion.a>
             </div>
             <div className='flex justify-center font-bold text-xl'>
-              <button className='flex  flex-col items-center'>
+              <button onClick={handleScroll} className='flex  flex-col items-center'>
                 <span className='hover:animate-bounce text-[#F95738]'>
                   <Arrow size={25}/>
                 </span>About Me
