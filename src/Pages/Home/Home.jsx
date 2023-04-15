@@ -76,7 +76,7 @@ function Home() {
           </p>
           <div className='text-3xl font-extrabold flex pt-10'>
             <motion.button whileHover={{scale:1.1}}>
-              <a className='none' href=''></a>
+              <a className='none' href='https://www.linkedin.com/in/ali-kagan-yilmaz/'></a>
               <span className='bg-[#F95738] bg-opacity-50 rounded-full p-5'>
                 Hire Me
               </span>
