@@ -10,7 +10,7 @@ a{
 a:focus{
     outline: none;
 }
-a:after{
+.underline:after{
     content : "";
     position: absolute;
     background-color: #F95738;
@@ -19,7 +19,7 @@ a:after{
     left: 0;
     margin-top: 24px;
 }
-a:hover:after{
+.underline:hover:after{
     transition: all;
     transition-duration: 0.5s;
     width: 100%;

@@ -6,16 +6,16 @@ function Navbar() {
     <nav className='font-bold backdrop-blur-sm'>
         
         <NavLink to="/">
-         <a>Anasayfa</a>
+         <a className={"underline"}>Anasayfa</a>
         </NavLink>
         <NavLink to="/Projeler">
-         <a>Projeler</a>  
+         <a className={"underline"}>Projeler</a>
         </NavLink>    
         <NavLink to="/Wall">
-         <a>Duvar</a>
+         <a className={"underline"}>Duvar</a>
         </NavLink>
         <NavLink to="/Contact">
-         <a>Contact</a>
+         <a className={"underline"}>Contact</a>
         </NavLink>
     </nav>
   )
