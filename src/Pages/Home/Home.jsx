@@ -42,7 +42,7 @@ function Home() {
                         role="a"
                         className="no-underline text-decoration-none! flex flex-col text-black text-opacity-50 font-bold text-xl justify-center items-center w-1/3 px-5 py-10 bg-opacity-20 rounded-xl shadow-inner shadow-black bg-white"
                         whileHover={{scale: 1.1}}
-                        to="/projeler"
+                        href="/projeler"
                     >
                         Projects
                     </motion.a>
