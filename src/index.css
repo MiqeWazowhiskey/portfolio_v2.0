@@ -13,3 +13,21 @@ code {
 }
 
 
+.sidebar-css::before {
+    content: "";
+    position: absolute;
+    color:black;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color:  rgb(254 243 199);
+    transition: height 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.sidebar-css:hover::before {
+    height: 100%;
+    background-color: rgb(254 243 199);
+}
+

@@ -11,8 +11,10 @@ function Projeler() {
       .catch((Error) => console.log(Error));
   }, []);
   return (
-    <Layout>
-      <div className="flex flex-col gap-x-20 gap-y-10 items-center">
+    <>
+
+      <div className="flex flex-col gap-x-20 gap-y-10 items-start ml-10 mb-10">
+          <p className="text-4xl font-mono font-bold w-full">Projects</p>
         {repos.map((repo) => {
           return (
             <motion.a
@@ -20,14 +22,14 @@ function Projeler() {
               href={repo.clone_url}
               whileHover={{ scale: 1.1 }}
             >
-              <div className="flex flex-col lg:w-96 px-3 rounded-lg w-48 border border-gray-200 bg-gray-100 shadow-md shadow-black">
+              <div className="flex flex-col px-3 rounded-lg lg:w-96 md:w-96 w-48 border border-amber-200">
                 <div>
                   <div className="flex flex-row text-gray-500 items-center justify-start">
                     <RiGitRepositoryLine />
-                    <div className="text-blue-500">{repo.name}</div>
+                    <div className="text-blue-500 ml-2">{repo.name}</div>
                   </div>
                   <div className="flex flex-col justify-start text-gray-400">
-                    <p className="">
+                    <p>
                       {repo.description}⭐{repo.stargazers_count}
                     </p>
                   </div>
@@ -36,12 +38,8 @@ function Projeler() {
             </motion.a>
           );
         })}
-        <h3 className="items-center text-xl font-bold">
-          {" "}
-          And billions are on the way, Stay Tuned !{" "}
-        </h3>
       </div>
-    </Layout>
+    </>
   );
 }
 

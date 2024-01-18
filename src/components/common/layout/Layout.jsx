@@ -1,39 +1,26 @@
 import React from "react";
 import Header from "../header";
 import {TbLetterA as A} from "react-icons/tb";
+import {Sidebar} from "../../Sidebar";
+import useWindowLocation from "../../../hooks/useWindowLocation";
 
 const Layout = ({children}) => {
-    const [child,setChild] = React.useState("");
-    const urlChild = window.location.pathname;
-    React.useEffect(() => {
-        setChild(urlChild)
-    }, [])
+    const pathName = useWindowLocation();
     return (
-        <div className="flex min-h-[100vh] flex-col text-[#FFFFFF]  bg-gradient-to-r from-amber-200 to-amber-900">
-            <div className="fixed h-full w-full flex justify-center  rotate-12 opacity-50 lg:pt-3">
-        <span className="text-[#F95738]">
-          <A size={800}/>
-        </span>
-            </div>
-            <div className="fixed h-full w-full flex justify-center rotate-12 opacity-50 lg:pt-3">
-        <span className="mb-10 mr-10 text-[#F4D35E]">
-          <A size={800}/>
-        </span>
-            </div>
-            {child.length>1 && <div className="fixed z-40 w-full h-fit">
-                <Header/>
-            </div>}
+        <div className="flex flex-row min-h-screen text-black">
+            <Sidebar currentPath={pathName}/>
             <React.Suspense
                 fallback={
-                    <div className="text-black w-full justify-center items-center text-3xl font-extrabold">
+                    <div
+                        className="absolute flex text-black w-screen h-screen justify-center items-center text-3xl font-extrabold">
+                    <span>
                         Loading...
-                    </div>
-                }
+                    </span>
+                    </div>}
             >
-                <div className={child.length>1 ? "pt-20 z-30" : "z-30" }>{children}</div>
+                <div className="lg:ml-[300px] md:ml-[300px] mt-10 lg:w-[calc(100%-300px)] md:w-[calc(100%-300px)] w-full">{children}</div>
             </React.Suspense>
-        </div>
-    );
+        </div>);
 };
 
 export default Layout;

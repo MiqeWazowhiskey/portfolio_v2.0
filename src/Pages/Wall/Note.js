@@ -32,7 +32,7 @@ function Note({ user }) {
           className="bg-blue-600 rounded-lg hover:bg-blue-300"
           onClick={() => auth.signOut()}
         >
-          <p className="text-white px-2 py-2">Logout</p>
+          <p className="px-2 py-2">Logout</p>
         </button>
       </div>
       <div className="flex justify-center h-16 border p-2 gap-x-2">
